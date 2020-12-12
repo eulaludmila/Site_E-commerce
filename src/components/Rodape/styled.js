@@ -17,7 +17,7 @@ export const Footer = styled.footer`
 
         h2{
             color: #fff;
-            font-weight: bold;
+            font-weight: 700;
             margin-top: 0;
         }
 
@@ -30,7 +30,7 @@ export const Footer = styled.footer`
         p{
             color:#fff;
             font-style: normal;
-            font-weight: normal;
+            font-weight: 400;
             font-size: 15px;
             line-height: 12px;
             

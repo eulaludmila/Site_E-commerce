@@ -4,6 +4,7 @@ import imgContato from '../../assets/fale-conosco.svg'
 import logosFooter from '../../assets/Logos-Footer.svg'
 
 function Rodape(){
+
     return(
         <Footer>
             <div className="container-footer">
