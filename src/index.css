@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;900&display=swap');
 
 body {
   margin: 0;
@@ -19,21 +19,4 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
-
-.far{
-  background-color: #000;;
-}
-
-.stars{
-  pointer-events: none;
-}
-
-.container-produtos{
-  max-width: 1200px;
-  margin: 0 auto 50px;;
-  display: grid;
-  column-gap: 50px;
-  row-gap: 10px;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }

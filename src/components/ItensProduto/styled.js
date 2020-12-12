@@ -27,7 +27,10 @@ export const Item = styled.div`
         justify-content:center;
         align-items:center;
         padding-bottom:20px;
-        transition: all 0.5s;
+    }
+
+    .stars{
+        pointer-events: none;
     }
 
     h3{
@@ -36,7 +39,7 @@ export const Item = styled.div`
         font-size: 16px;
         line-height: 16px;
         text-align: center;
-
+        margin-bottom:0;
         color: #7A7A7A;
     }
 
@@ -72,9 +75,6 @@ export const Item = styled.div`
         color:#fff;
         margin-top: 15px;
         font-weight:700;
-        visibility:0;
-        display:none;
-        transition: all 2s;
     }
 
     &:hover button{
@@ -83,9 +83,23 @@ export const Item = styled.div`
         cursor: pointer;
     }
 
-    &:hover .detalhes{
+    @media(min-width: 1000px){
+
+        &:hover .detalhes{
         
         background-color:#E6E8EA;
+        }
+
+        button{
+            visibility:0;
+            display:none;
+        }
+    }
+
+    @media(max-width: 1000px){
+        button{
+            display:block;
+        }
     }
 
 `

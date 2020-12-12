@@ -17,7 +17,7 @@ export const ContainerNews = styled.div`
     @media(max-width:780px){
 
         h2{
-            text-align:justify;
+            text-align:left;
             padding: 0 20px;
         }
     }
@@ -27,16 +27,13 @@ export const ContainerNews = styled.div`
 
 export const Form = styled.form`
 
-    max-width: 1000px;
-    padding: 25px 20px;
+    max-width: 800px;
+    padding: 25px 0;
     margin: 0 auto;
     display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     justify-content:center;
-    align-items:center;
-    column-gap: 10px;
+    column-gap: 2%;
     row-gap: 10px;
-    
 
     input{
         width: 100%;
@@ -55,6 +52,17 @@ export const Form = styled.form`
         }
     }
 
+    @media(min-width:600px){
+        
+        grid-template-columns: 36% 36% 24%;
+    }
+    @media(max-width:600px){
+        
+        grid-template-columns: 100%;
+        .form-group{
+            padding: 0 20px;
+        }
+    }
     @media(min-width:530px){
 
         button{
@@ -78,6 +86,21 @@ export const Form = styled.form`
         cursor:pointer;
         font-weight:700;
         line-height: 14px;
+        margin-top: 10px;
+    }
+
+    span{
+        font-style: normal;
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 12px;
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+
+        /* color-second */
+
+        color: #D7182A;
     }
 
 
@@ -85,13 +108,14 @@ export const Form = styled.form`
 
 export const NovoCadastro = styled.div`
 
-    max-width:1200px;
+    max-width:800px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 25px 20px 0;
     display:flex;
     flex-direction:column;
     justify-content:center;
     align-items:center;
+    box-sizing:border-box;
 
     h3{
         text-align:center;

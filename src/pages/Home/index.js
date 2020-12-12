@@ -3,6 +3,8 @@ import { useState, useEffect } from 'react';
 import ItensProduto from '../../components/ItensProduto';
 import api from '../../config/index'
 import Menu from '../../components/Menu'
+import Header from '../../components/Header'
+import {SectionProdutos} from './styled'
 
 const Home = () => {
     const [produtos, setProdutos] = useState([]);
@@ -26,17 +28,22 @@ const Home = () => {
     return (
         <>
         <Menu/>
-            <section className="container-produtos">
-                {
-                   
+        <Header/>
+            <SectionProdutos>
+                <h2>Mais Vendidos</h2>
+                <div className="linha"></div>
+                <div className="produtos">
+                    {
+                    
                     produtos.map(dados => (
-                      
+                        
                             <ItensProduto key={dados.productId} item={dados} click={(produto) => chamar(produto)} />
-                       
+                        
                     ))
 
                 }
-            </section>
+                </div>
+            </SectionProdutos>
         </>
     );
 }

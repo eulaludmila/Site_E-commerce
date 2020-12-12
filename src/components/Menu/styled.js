@@ -4,14 +4,45 @@ import styled from 'styled-components';
 export const NavMenu = styled.nav`
 
     width: 100%;
-    height:80px;
+    min-height:80px;
+    height:auto;
+    padding: 0 15px;
+    box-sizing:border-box;
 
     .logo{
+        
         display:flex;
         align-items:center;
+
+        img{
+            height: 35px;
+        }
     }
 
-    .pesquisa{
+    .container-menu{
+        max-width:1200px;
+        height:80px;
+        margin: 0 auto;
+        
+        align-items:center
+    }
+
+    @media(min-width: 800px){
+
+        .menu-mobile{
+            display:none;
+        }
+
+        .container-menu{
+            display:grid;
+            grid-template-columns: 20% 50% 20% 10%; 
+        }
+
+        .pesquisa-mobile{
+            display:none;
+        }
+
+        .pesquisa{
         height: 30px;
         display:flex;
         justify-content:center;
@@ -19,39 +50,71 @@ export const NavMenu = styled.nav`
         border-bottom: 1px solid #7A7A7A;
 
 
-        input{
-            border:none;
-            width:100%;
-            padding: 0 15px 0 0 ;
+            input{
+                border:none;
+                width:100%;
+                padding: 0 15px 0 0 ;
+            }
+
+            input::placeholder{
+                color: #7A7A7A;
+            }
         }
 
-        input::placeholder{
-            color: #7A7A7A;
-        }
-    }
-
-    .container-menu{
-        max-width:1200px;
-        height: inherit;
-        margin: 0 auto;
-        display:grid;
-        grid-template-columns: 30% 50% 20% 10%; 
-        align-items:center
-    }
-
-    .minha-conta{
+        .minha-conta{
         display:flex;
         justify-content:center;
         align-items:center;
 
-        div{
-            font-style: normal;
-            font-weight: 400;
-            font-size: 13px;
-            line-height: 18px;
-            margin-left: 5px;
+            div{
+                font-style: normal;
+                font-weight: 400;
+                font-size: 13px;
+                line-height: 18px;
+                margin-left: 5px;
 
-            color: #7A7A7A;
+                color: #7A7A7A;
+            }
+        }
+    }
+    @media(max-width: 800px){
+
+        .menu-mobile{
+            display:block;
+            margin-top: 15px;
+        }
+        .container-menu{
+            display: flex;
+            justify-content:space-between;
+            align-items:center;
+
+            /* grid-template-columns: repeat(3, 1fr);*/ 
+        } 
+        .minha-conta{
+            display:none;
+        }
+
+        .pesquisa{
+            display:none;
+        }
+
+        .pesquisa-mobile{
+        height: 30px;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        border-bottom: 1px solid #7A7A7A;
+
+
+            input{
+                border:none;
+                width:100%;
+                padding: 0 15px 0 0 ;
+            }
+
+            input::placeholder{
+                color: #7A7A7A;
+            }
         }
     }
 

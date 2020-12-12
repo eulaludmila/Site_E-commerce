@@ -23,7 +23,9 @@ export const Footer = styled.footer`
 
         .linha{
             width: 50px;
-            border: 3px solid #FFFFFF;
+            height: 5px;
+            background-color: #fff;
+            border: 1px solid #FFFFFF;
             margin-bottom:30px;
         }
 

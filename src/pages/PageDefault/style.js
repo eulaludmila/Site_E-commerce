@@ -7,8 +7,8 @@ export const Main = styled.main`
     flex:1;
     
     /* padding-top: 50px; */
-    padding-left: 5%;
-    padding-right: 5%;
+    /* padding-left: 5%;
+    padding-right: 5%; */
     /*Verifica se existe o parâmetro */
     ${({ paddingAll }) => css`
         padding: ${paddingAll};
