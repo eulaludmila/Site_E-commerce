@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import ItensProduto from '../../components/ItensProduto';
 import api from '../../config/index'
-import Footer from '../../components/Rodape'
+import Menu from '../../components/Menu'
 
 const Home = () => {
     const [produtos, setProdutos] = useState([]);
@@ -25,6 +25,7 @@ const Home = () => {
 
     return (
         <>
+        <Menu/>
             <section className="container-produtos">
                 {
                    
