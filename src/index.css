@@ -13,7 +13,20 @@ body {
   
   font-family: 'Nunito', 'Roboto', 'Oxygen';
   outline: none !important;
+  box-sizing: border-box;
 
+}
+
+.visible{
+  visibility: visible;
+}
+
+.invalido{
+  border: solid 1px #D7182A !important;
+}
+
+.hidden{
+  visibility: hidden;
 }
 
 code {

@@ -23,9 +23,29 @@ export const SectionProdutos = styled.section`
     div.produtos{
         width: 100%;
         display: grid;
-        column-gap: 50px;
         row-gap: 10px;
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+
+    @media(min-width:1200px){
+        div.produtos{
+            grid-template-columns: repeat(4, 1fr);
+            column-gap: 50px;
+        }
+    }
+
+    @media(min-width: 750px) and (max-width:1200px){
+        div.produtos{
+            grid-template-columns: repeat(3, 1fr);
+            column-gap: 50px;
+        }
+    }
+   
+    @media(max-width: 750px){
+        div.produtos{
+            place-items:center;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 20px;
+        }
     }
 
 `

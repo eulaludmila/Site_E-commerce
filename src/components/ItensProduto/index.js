@@ -4,6 +4,7 @@ import ReactStars from 'react-rating-stars-component';
 
 const ItensProduto = (props) => {
 
+    //Funç~"ao para trasnformar número para moeda Real"
     function numberToReal(numero) {
 
         numero = String(numero);
@@ -17,6 +18,7 @@ const ItensProduto = (props) => {
         return numeroFloat;
     }
 
+    //Enviando o produto para o carrinho
     function enviarCarrinho(item){
         let carrinhoStorage = [];
 
@@ -25,18 +27,19 @@ const ItensProduto = (props) => {
             carrinhoStorage = JSON.parse(sessionStorage.getItem('carrinho'));
         }
         carrinhoStorage.push(item);
+        //Adicionando o produto
         sessionStorage.setItem('carrinho', JSON.stringify(carrinhoStorage))
 
-        let qauntidadeItens = carrinhoStorage.length;
+        let quantidadeItens = carrinhoStorage.length;
 
-        props.carrinho(qauntidadeItens);
+        //Passando para a props da página Home a quantidade de itens no carrinho
+        props.carrinho(quantidadeItens);
       
     }
     
 
     return (
         <Item>
-
             {
                 props.item.listPrice !== null &&
                 <img src={imgDesconto} alt="Desconto" className="img-desconto" />
@@ -54,18 +57,17 @@ const ItensProduto = (props) => {
                     activeColor="#F8475F"
                     classNames="stars"
                 />
+                <p className="preco-antigo" style={{visibility: props.item.listPrice !== null ? 'visible' : 'hidden'}}>
+                        de R$ {numberToReal(props.item.listPrice)}
+                </p>
 
-                {
-                    props.item.listPrice !== null &&
-
-                    <p className="preco-antigo">
-                        de R$ {numberToReal(props.item.listPrice)}</p>
-
-                }
-                <p className="preco-atual">por R$ {numberToReal(props.item.price)}</p>
-                {
-                    props.item.installments.length !== 0 && <p className="parcela">ou em {props.item.installments[0].quantity}x de R$ {numberToReal(props.item.installments[0].value)}</p>
-                }
+                <p className="preco-atual">
+                    por R$ {numberToReal(props.item.price)}
+                </p>
+               
+                <p className="parcela"  style={{visibility: props.item.installments.length !== 0 ? 'visible' : 'hidden'}}>
+                    ou em {props.item.installments.length !== 0 && props.item.installments[0].quantity}x de R$ {props.item.installments.length !== 0 && numberToReal(props.item.installments[0].value)}
+                </p>
 
                 <button type="button" onClick={() => enviarCarrinho(props.item)}>COMPRAR</button>
             </div>

@@ -19,6 +19,7 @@ const Home = () => {
 
             })
 
+        //Verifica se existe a sessão de carrinho e adiciona a quantidade no state do Carrinho
         if(JSON.parse(sessionStorage.getItem('carrinho')) !== null){
            
             setCarrinho(JSON.parse(sessionStorage.getItem('carrinho')).length);
@@ -26,6 +27,7 @@ const Home = () => {
 
     }, [setProdutos, setCarrinho])
 
+    //Pegando o valor da quantidade de produtos no carrinho que foi passado pelas props e adicionando na state
     function enviarQuantidadeProduto(quantidade){
         setCarrinho(quantidade);
     }
@@ -34,6 +36,7 @@ const Home = () => {
         <>
             <Menu carrinho={carrinho}/>
             <Header/>
+
             <SectionProdutos>
                 <h2>Mais Vendidos</h2>
                 <div className="linha"></div>

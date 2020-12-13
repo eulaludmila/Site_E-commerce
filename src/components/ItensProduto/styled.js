@@ -15,8 +15,7 @@ export const Item = styled.div`
     }
     .img-produto{
         width: 100%;
-        height:  220px;
-        object-fit:contain;
+        object-fit:100% 100%;
         object-position:center;
     }
 
@@ -67,7 +66,6 @@ export const Item = styled.div`
     }
 
     button{
-        width: 140px;
         height: 45px;
         background: #000000;
         border-radius: 5px;
@@ -78,27 +76,56 @@ export const Item = styled.div`
     }
 
     &:hover button{
-        visibility:1;
+        visibility: visible;
         display:block;
         cursor: pointer;
     }
 
     @media(min-width: 1000px){
 
+        &:hover{
+            box-shadow: 0 0 10px 0 rgba(0,0,0,0.1)
+        }
+
         &:hover .detalhes{
         
         background-color:#E6E8EA;
+        transition: background-color 0.1s linear;
         }
 
         button{
-            visibility:0;
-            display:none;
+            width: 140px;
+            visibility: hidden;
+        }
+
+        .img-produto{
+            height:  250px;
         }
     }
 
     @media(max-width: 1000px){
         button{
-            display:block;
+            visibility: visible;
+        }
+    }
+
+    @media(min-width: 750px) and (max-width:1000px){
+
+        button{
+            width: 140px;
+        }
+      
+        .img-produto{
+            height:  180px;
+        }
+       
+    }
+    @media(max-width: 750px){
+        button{
+            width: 100%;
+        }
+        .img-produto{
+            height:  180px;
         }
     }
 
