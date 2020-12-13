@@ -5,7 +5,6 @@ import imgHeaderMobile from '../../assets/header-foto.png'
 export const FundoHeader = styled.header`
 
     width: 100%;
-    
     background-size: 100% 100%;
     background-repeat:no-repeat;
 
@@ -14,9 +13,21 @@ export const FundoHeader = styled.header`
         background-image: url(${imgHeader});
     }
 
-    @media(max-width:1000px){
-        height: 350px;
+    @media(min-width:800px) and (max-width: 1000px){
+        height: 400px;
         background-image: url(${imgHeaderMobile});
+        .container-header{
+            background-color: rgba(0,0,0,0.5);
+        }
+    }
+
+    @media(max-width:800px){
+        height: 300px;
+        background-image: url(${imgHeaderMobile});
+        .container-header{
+
+            background-color: rgba(0,0,0,0.5);
+        }
     }
 
     .container-header{
@@ -29,6 +40,7 @@ export const FundoHeader = styled.header`
         justify-content:center;
         padding: 0 15px;
         box-sizing:border-box;
+       
 
         p, h1{
             max-width: 600px;

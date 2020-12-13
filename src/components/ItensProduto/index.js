@@ -17,8 +17,20 @@ const ItensProduto = (props) => {
         return numeroFloat;
     }
 
-    function enviarProduto(){
-        props.click(props);
+    function enviarCarrinho(item){
+        let carrinhoStorage = [];
+
+        if(JSON.parse(sessionStorage.getItem('carrinho')) !== null){
+            
+            carrinhoStorage = JSON.parse(sessionStorage.getItem('carrinho'));
+        }
+        carrinhoStorage.push(item);
+        sessionStorage.setItem('carrinho', JSON.stringify(carrinhoStorage))
+
+        let qauntidadeItens = carrinhoStorage.length;
+
+        props.carrinho(qauntidadeItens);
+      
     }
     
 
@@ -55,7 +67,7 @@ const ItensProduto = (props) => {
                     props.item.installments.length !== 0 && <p className="parcela">ou em {props.item.installments[0].quantity}x de R$ {numberToReal(props.item.installments[0].value)}</p>
                 }
 
-                <button type="button" onClick={() => enviarProduto()}>COMPRAR</button>
+                <button type="button" onClick={() => enviarCarrinho(props.item)}>COMPRAR</button>
             </div>
 
         </Item>

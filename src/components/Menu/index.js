@@ -6,7 +6,7 @@ import imgCarrinho from '../../assets/carrinho.svg'
 import imgMenu from '../../assets/menu.svg'
 
 
-function Menu(){
+function Menu(props){
 
     return(
         <NavMenu>
@@ -27,7 +27,7 @@ function Menu(){
                 </div>
                 <div className="carrinho">
                     <img src={imgCarrinho} alt="Carrinho"/>
-                    <div>1</div>
+                    {props.carrinho > 0 && <div>{props.carrinho}</div>}
                 </div>
             </div>
             <div className="pesquisa-mobile">

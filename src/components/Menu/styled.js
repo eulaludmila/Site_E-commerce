@@ -99,11 +99,12 @@ export const NavMenu = styled.nav`
         }
 
         .pesquisa-mobile{
-        height: 30px;
-        display:flex;
-        justify-content:center;
-        align-items:center;
-        border-bottom: 1px solid #7A7A7A;
+            height: 30px;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            border-bottom: 1px solid #7A7A7A;
+            margin-bottom: 15px;
 
 
             input{
