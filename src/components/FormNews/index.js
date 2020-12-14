@@ -52,7 +52,7 @@ const FormNews = () => {
 
         for (const key in form) {
             
-            //Verifica campos vazios
+            //Verifica campos vazios e valida nome com tamanho a partir de 5 cracteres
             if (form[key] === '' || (key === 'nome' && form['nome'].length < 5)) {
                 camposVazios = {...camposVazios, [key]:true};
                 contadorVazio++;
