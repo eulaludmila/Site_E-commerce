@@ -2,7 +2,7 @@
 
 ## Instruções para rodar o projeto
 
-1º passo - rodar o comando "npm i" para instalar todas as bibliotecas necessárias
+1º passo - rodar o comando "npm i" para instalar todas as bibliotecas necessárias<br/>
 2º passo - rodar o comando "npm start" para subir no modo browser a aplicação
 
 
