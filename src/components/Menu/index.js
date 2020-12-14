@@ -5,6 +5,7 @@ import imgConta from '../../assets/minha-conta.svg'
 import imgCarrinho from '../../assets/carrinho.svg'
 import imgMenu from '../../assets/menu.svg'
 
+//Menu recebendo nas props a quantidade de itens no carrinho, que foi passada pela página Home
 const Menu = (props) => (
     <NavMenu>
         <div className="container-menu">

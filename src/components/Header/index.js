@@ -1,5 +1,6 @@
 import { FundoHeader } from './styled'
 
+//Área do cabeçalho
 const Header = () => (
 
     <FundoHeader>

@@ -30,7 +30,7 @@ const Home = () => {
         <>
             <Menu carrinho={carrinho} />
             <Header />
-
+            
             <SectionProdutos>
                 <h2> Mais Vendidos </h2>
                 <div className="linha"></div>

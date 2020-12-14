@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 
+//Área do cadastro para a promoção
 export const ContainerNews = styled.div`
 
     width: 100%;
@@ -24,7 +25,7 @@ export const ContainerNews = styled.div`
 
 
 `
-
+//Fomulário de cadastro
 export const Form = styled.form`
 
     max-width: 800px;
@@ -55,6 +56,10 @@ export const Form = styled.form`
     @media(min-width:600px){
         
         grid-template-columns: 36% 36% 24%;
+
+        button{
+            width: 140px;
+        }
     }
     @media(max-width:600px){
         
@@ -62,23 +67,16 @@ export const Form = styled.form`
         .form-group{
             padding: 0 20px;
         }
-    }
-    @media(min-width:530px){
-
-        button{
-            width: 140px;
-        }
-    }
-    @media(max-width:530px){
 
         button{
             width:100%;
+            margin-top: 10px;
         }
     }
 
     button{
        
-        height: 48px;
+        height: 50px;
         color:#fff;
         background-color:#000;
         border:none;
@@ -86,7 +84,7 @@ export const Form = styled.form`
         cursor:pointer;
         font-weight:700;
         line-height: 14px;
-        margin-top: 10px;
+        
     }
 
     span{
@@ -102,8 +100,8 @@ export const Form = styled.form`
 
 
 `
-
-export const NovoCadastro = styled.div`
+//Área de mensagem de sucesso do cadastro
+export const SucessoCadastro = styled.div`
 
     max-width:800px;
     margin: 0 auto;

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ContainerNews, Form, NovoCadastro } from './styled'
+import { ContainerNews, Form, SucessoCadastro } from './styled'
 import Input from '../../components/Input'
 import api from '../../config/index';
 
@@ -83,8 +83,11 @@ const FormNews = () => {
     function handleIsEmail(email){
         let regEmail = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
+        //Email inválido
         if(!regEmail.test(email)){
             return false;
+
+        //Email válido
         }else{
             return true;
         }
@@ -109,11 +112,11 @@ const FormNews = () => {
                     
                 </> :
                 
-                <NovoCadastro>
+                <SucessoCadastro>
                     <h3>Seu e-mail foi cadastrado com sucesso!</h3>
                     <p>A partir de agora você receberá as novidade e ofertas exclusivas.</p>
                     <button type="button" onClick={() => {setIsCadastro(false)}}>Cadastrar novo e-mail</button>
-                </NovoCadastro>
+                </SucessoCadastro>
             }
         </ContainerNews>
     )

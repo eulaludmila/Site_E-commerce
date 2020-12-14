@@ -10,6 +10,8 @@ const ItensProduto = (props) => {
         numero = String(numero);
         let centavo = numero.substr(numero.length - 2);
         let real = numero.substr(0,numero.length - 2);
+
+        //Transformando o numero em real e obrigando a ter digitos na moeda
         let numeroFloat = Number(`${real}.${centavo}`).toLocaleString('pt-br', {
             minimumFractionDigits: 2,
             maximumFractionDigits: 2
@@ -26,10 +28,14 @@ const ItensProduto = (props) => {
             
             carrinhoStorage = JSON.parse(sessionStorage.getItem('carrinho'));
         }
+
+        //Adicionando o produto no array
         carrinhoStorage.push(item);
-        //Adicionando o produto
+
+        //Adicionando os produtos na sessão
         sessionStorage.setItem('carrinho', JSON.stringify(carrinhoStorage))
 
+        //Quantidade de produtos no carrinho
         let quantidadeItens = carrinhoStorage.length;
 
         //Passando para a props da página Home a quantidade de itens no carrinho

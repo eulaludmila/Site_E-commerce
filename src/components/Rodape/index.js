@@ -3,6 +3,7 @@ import imgMensagem from '../../assets/message.svg'
 import imgContato from '../../assets/fale-conosco.svg'
 import logosFooter from '../../assets/Logos-Footer.svg'
 
+//Rodapé com todas as informações da empresa
 const Rodape = () => (
     <Footer>
         <div className="container-footer">
