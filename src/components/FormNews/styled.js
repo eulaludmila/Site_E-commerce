@@ -97,9 +97,6 @@ export const Form = styled.form`
         margin-top: 10px;
         display: flex;
         align-items: center;
-
-        /* color-second */
-
         color: #D7182A;
     }
 

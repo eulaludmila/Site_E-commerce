@@ -4,7 +4,7 @@ import ReactStars from 'react-rating-stars-component';
 
 const ItensProduto = (props) => {
 
-    //Funç~"ao para trasnformar número para moeda Real"
+    //Função para trasnformar número para moeda Real"
     function numberToReal(numero) {
 
         numero = String(numero);

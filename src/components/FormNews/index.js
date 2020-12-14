@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import {ContainerNews, Form, NovoCadastro} from './styled'
+import { ContainerNews, Form, NovoCadastro } from './styled'
+import Input from '../../components/Input'
 import api from '../../config/index';
 
 const FormNews = () => {
@@ -8,6 +9,8 @@ const FormNews = () => {
 
     const [isCadastro, setIsCadastro] = useState(false);
     const [form, setForm] = useState(valoresInicias);
+
+    //Inicia erro com false. Caso houver um erro, mudará para true
     const [erro, setErro] = useState({nome:false, email:false});
 
     async function handleCadastroPromocao(e) {
@@ -50,7 +53,7 @@ const FormNews = () => {
         for (const key in form) {
             
             //Verifica campos vazios
-            if (form[key] === '') {
+            if (form[key] === '' || (key === 'nome' && form['nome'].length < 10)) {
                 camposVazios = {...camposVazios, [key]:true};
                 contadorVazio++;
             
@@ -65,6 +68,7 @@ const FormNews = () => {
             }
         }
         
+        //Adicionando ao estado Erro os campos de vazios ou não
         setErro(camposVazios);
 
         return contadorVazio;
@@ -93,15 +97,11 @@ const FormNews = () => {
                 <>
                     <h2>Participe de nossas news com promoções e novidades!</h2>
                     <Form onSubmit={handleCadastroPromocao}>
-                        <div className="form-group">
-                            <input placeholder="Digite seu nome" name="nome" value={form.nome} className={erro.nome ? 'invalido' : ''} onChange={(e) => handleChange(e)}/>
-                            {erro.nome && <span>Preencha com seu nome completo</span>}
-                        </div>
-                        <div className="form-group">
-                            <input placeholder="Digite seu email" name="email" value={form.email} className={erro.email ? 'invalido' : ''} onChange={(e) => handleChange(e)}/>
-                            {erro.email && <span>Preencha com um e-mail válido</span>}
-                            
-                        </div>
+
+                        <Input placeholder="Digite seu nome" name="nome" value={form.nome} onChange={(e) => handleChange(e)} erro={erro.nome} textoErro="Preencha com seu nome completo"/>
+
+                        <Input placeholder="Digite seu email" name="email" value={form.email} onChange={(e) => handleChange(e)} erro={erro.email} textoErro="Preencha com um e-mail válido"/>
+
                         <div className="form-group">
                             <button type="submit">Eu quero!</button>
                         </div>

@@ -1,15 +1,12 @@
 import PageDefault from './pages/PageDefault'
 import Home from './pages/Home'
 
-function App() {
-
-
-
-  return (
+const App = ()  => (
+ 
     <PageDefault>
-      <Home/>
+      <Home />
     </PageDefault>
-  );
-}
+  
+)
 
 export default App;
