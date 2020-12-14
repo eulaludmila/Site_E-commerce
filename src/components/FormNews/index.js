@@ -53,7 +53,7 @@ const FormNews = () => {
         for (const key in form) {
             
             //Verifica campos vazios
-            if (form[key] === '' || (key === 'nome' && form['nome'].length < 10)) {
+            if (form[key] === '' || (key === 'nome' && form['nome'].length < 5)) {
                 camposVazios = {...camposVazios, [key]:true};
                 contadorVazio++;
             
