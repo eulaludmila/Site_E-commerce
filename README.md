@@ -2,7 +2,8 @@
 
 ## Instruções para rodar o projeto
 
-1º passo - rodar o comando "npm i" para instalar todas as bibliotecas necessárias<br/>
-2º passo - rodar o comando "npm start" para subir no modo browser a aplicação
+1º passo - clonar o projeto com "git clone https://github.com/eulaludmila/Site_E-commerce.git" ou realizar o download ZIP<br/>
+2º passo - rodar o comando "npm i" para instalar todas as bibliotecas necessárias<br/>
+3º passo - rodar o comando "npm start" para subir no modo browser a aplicação
 
 
