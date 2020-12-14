@@ -1,4 +1,4 @@
-# ![logo-cinza](https://user-images.githubusercontent.com/47863213/102030015-bb7bc300-3d8f-11eb-9615-b883eea4db5a.png) Corebiz E-commerce
+# ![logo-cinza](https://user-images.githubusercontent.com/47863213/102030015-bb7bc300-3d8f-11eb-9615-b883eea4db5a.png) Site E-commerce
 
 ## Instruções para rodar o projeto
 
